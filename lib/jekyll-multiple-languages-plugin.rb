@@ -629,6 +629,7 @@ class TranslatedString < String
   # initialize
   #======================================
   def initialize(*several_variants, key)
+    several_variants = [''] if several_variants == [nil]
     super(*several_variants)
     @key = key
   end
